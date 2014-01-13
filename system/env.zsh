@@ -1,3 +1,2 @@
 export EDITOR='vi'
-export LESS='-R'
-
+export LESS='--ignore-case --RAW-CONTROL-CHARS'
