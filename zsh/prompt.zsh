@@ -50,10 +50,10 @@ need_push () {
   fi
 }
 
-rvm_prompt(){
-  if $(which rvm &> /dev/null)
+ruby_version(){
+  if $(which rbenv &> /dev/null)
   then
-	  echo "RVM:%{$fg[yellow]%}$(rvm tools identifier | sed 's/\(ruby-\)\(.*\)/\2/')%{$reset_color%}"
+	  echo "rb:%{$fg[yellow]%}$(rbenv version-name)%{$reset_color%}"
 	else
 	  echo ""
   fi
@@ -63,7 +63,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(directory_name) $(project_name_color)$(git_dirty) $(need_push) $(rvm_prompt)\n› '
+export PROMPT=$'\n$(directory_name)$(project_name_color)$(git_dirty)$(need_push)$(ruby_version)\n› '
 set_prompt () {
   export RPROMPT=""
 }
