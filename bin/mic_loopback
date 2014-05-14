@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# set -x
+
+load_module()
+{
+  pactl load-module module-loopback latency_msec=1
+}
+
+unload_module()
+{
+  pactl unload-module $(pactl list short modules | grep loopback | awk '{print $1}')
+}
+
+case "x$1" in
+  ( xon | xstart ) load_module
+    exit;;
+  ( xoff | xstop ) unload_module
+    exit;;
+  ( * ) echo "$0: use with on/off or start/stop" 1>&2
+    unload_module || load_module
+    exit 1;;
+esac
