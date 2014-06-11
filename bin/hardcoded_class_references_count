@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Count explicit class and module mentions in the code.
+
+set -e
+
+function classes {
+  ack-grep --no-filename --nocolor '^[[:space:]]*(class|module)' --ruby app lib |
+  sed 's/^\W*//' |
+  cut -d ' ' -f 2 |
+  sed -e 's/.*:://' |
+  grep --invert-match '<<' |
+  grep --invert-match '=' |
+  sort --uniq
+}
+
+function explicit_call {
+  ack-grep --word-regexp --ruby $1 lib app | wc -l
+}
+
+function class_by_mentions {
+  for class in $(classes)
+  do
+    echo $(explicit_call $class) $class
+  done
+}
+
+class_by_mentions | sort -n
