@@ -12,3 +12,4 @@ webrat.log
 # Local config
 .bundle/
 Session.vim
+.env.local
