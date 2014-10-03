@@ -12,7 +12,7 @@ git_dirty() {
   then
     echo ""
   else
-    if [[ $st == "nothing to commit (working directory clean)" ]]
+    if $( echo $st | grep -q "working directory clean" )
     then
       echo " on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
@@ -53,9 +53,9 @@ need_push () {
 ruby_version(){
   if $(which rbenv &> /dev/null)
   then
-	  echo " rb:%{$fg[yellow]%}$(rbenv version-name)%{$reset_color%}"
-	else
-	  echo ""
+    echo " rb:%{$fg[yellow]%}$(rbenv version-name)%{$reset_color%}"
+  else
+    echo ""
   fi
 }
 
@@ -63,7 +63,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(directory_name)$(project_name_color)$(git_dirty)$(need_push)$(ruby_version)\n› '
+export PROMPT=$'\n$? $(directory_name)$(project_name_color)$(git_dirty)$(need_push)$(ruby_version)\n› '
 set_prompt () {
   export RPROMPT=""
 }
