@@ -18,9 +18,3 @@ fi
 autoload -U compinit
 compinit
 
-# add rbenv to the path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# added by travis gem
-[ -f /home/eloyesp/.travis/travis.sh ] && source /home/eloyesp/.travis/travis.sh
