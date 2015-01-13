@@ -2,7 +2,6 @@
 !
 ! http://ethanschoonover.com/solarized
 
-
 ! Common
 
 #define S_yellow        #b58900
@@ -70,5 +69,10 @@
 *color15:                 S_base3
 
 ! FontFace
-
 *faceName: Inconsolata:size=14:antialias=true
+
+! Xclock
+xclock*update:            1
+xclock*analog:            false
+xclock*Foreground:        white
+xclock*background:        black
