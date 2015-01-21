@@ -70,6 +70,15 @@
 
 ! FontFace
 *faceName: Inconsolata:size=14:antialias=true
+XTerm*faceSize1:    10
+XTerm*faceSize2:    11
+XTerm*faceSize3:    12
+XTerm*faceSize4:    14
+XTerm*faceSize5:    18
+XTerm*faceSize6:    26
+
+*VT100.Translations: #override Ctrl <Key>+: larger-vt-font() \n\
+Ctrl <Key>-: smaller-vt-font()
 
 ! Xclock
 xclock*update:            1
