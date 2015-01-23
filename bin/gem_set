@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+GEM_SET=$PWD/.gs
+
+mkdir -p $GEM_SET
+
+PATH=$GEM_SET/bin:$PATH
+
+GEM_HOME=$GEM_SET
+GEM_PATH=$GEM_SET:$GEM_PATH
+
+export GEM_SET PATH GEM_HOME GEM_PATH
+
+echo "Initializing local environment for $PWD"
+zsh
+echo "Returning to global realitiy"
