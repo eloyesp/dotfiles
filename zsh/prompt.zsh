@@ -58,7 +58,13 @@ directory_name(){
   echo "%{$color%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$? $(directory_name)$(git_dirty)$(need_push)$(ruby_version)\n› '
+local_hostname(){
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]
+  then echo "%{$fg_bold[red]%}@$(hostname)%{$reset_color%}"
+  fi
+}
+
+export PROMPT=$'\n$(local_hostname)$? $(directory_name)$(git_dirty)$(need_push)$(ruby_version)\n› '
 set_prompt () {
   export RPROMPT=""
 }
