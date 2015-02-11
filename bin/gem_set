@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
+
+[[ -n $GEM_SET ]] && echo "Already in GEM_SET '$GEM_SET.'" && exit 1
 
 GEM_SET=$PWD/.gs
 

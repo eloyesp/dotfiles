@@ -27,16 +27,6 @@ git_prompt_info () {
  echo "${ref#refs/heads/}"
 }
 
-project_name () {
-  name=$(pwd | awk -F'Development/' '{print $2}' | awk -F/ '{print $1}')
-  echo $name
-}
-
-project_name_color () {
-#  name=$(project_name)
-  echo "%{\e[0;35m%}${name}%{\e[0m%}"
-}
-
 unpushed () {
   /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
 }
@@ -60,10 +50,15 @@ ruby_version(){
 }
 
 directory_name(){
-  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+  local color
+  if [[ -n $GEM_SET ]]
+  then color=$fg_bold[magenta]
+  else color=$fg_bold[cyan]
+  fi
+  echo "%{$color%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$? $(directory_name)$(project_name_color)$(git_dirty)$(need_push)$(ruby_version)\n› '
+export PROMPT=$'\n$? $(directory_name)$(git_dirty)$(need_push)$(ruby_version)\n› '
 set_prompt () {
   export RPROMPT=""
 }

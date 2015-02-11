@@ -8,6 +8,7 @@
 webrat.log
 /tags
 /doc/tags
+.gs/
 
 # Local config
 .bundle/
