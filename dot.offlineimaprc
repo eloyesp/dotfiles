@@ -1,0 +1,24 @@
+[general]
+accounts = eloyespgmail-local
+maxsyncaccounts = 1
+
+[Account eloyespgmail-local]
+localrepository = local
+remoterepository = eloyespgmail
+autorefresh = 2
+quick = 2
+
+[Repository eloyespgmail]
+type = Gmail
+remoteuser = eloyesp@gmail.com
+# The below will put all GMAIL folders as sub-folders of the 'local' INBOX,
+# assuming that your path separator on 'local' is a dot.
+# nametrans = lambda x: 'INBOX.' + x
+folderfilter = lambda folder: folder.startswith('[Gmail]/Todos')
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+# Prevent propagation of folders to gmail
+createfolders = False
+
+[Repository local]
+type = Maildir
+localfolders = ~/Mail/gmail
