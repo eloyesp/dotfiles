@@ -14,7 +14,7 @@ remoteuser = eloyesp@gmail.com
 # The below will put all GMAIL folders as sub-folders of the 'local' INBOX,
 # assuming that your path separator on 'local' is a dot.
 # nametrans = lambda x: 'INBOX.' + x
-folderfilter = lambda folder: folder.startswith('[Gmail]/Todos')
+folderfilter = lambda folder: folder in ['[Gmail]/Todos', 'INBOX']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 # Prevent propagation of folders to gmail
 createfolders = False
