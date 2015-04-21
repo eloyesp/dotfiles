@@ -6,7 +6,7 @@ set spoolfile = ~/Mail/gmail/INBOX
 set alias_file = ~/.mutt_aliases
 source ~/.mutt_aliases
 set query_command = "goobook query '%s'"
-#bind editor <tab> complete-query
+bind editor <tab> complete-query
 
 set attribution = "En %d, %n escribió:"
 set sort_aux = last-date-received
