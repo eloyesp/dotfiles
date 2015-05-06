@@ -51,6 +51,8 @@ set softtabstop=2
 
 nmap ñr :wa\|!rake<CR>
 
+let g:pandoc#formatting#mode = 'h'
+let g:pandoc#formatting#textwitdth = 80
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
