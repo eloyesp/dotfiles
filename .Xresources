@@ -86,3 +86,25 @@ xclock*update:            1
 xclock*analog:            false
 xclock*Foreground:        white
 xclock*background:        black
+
+! URxvt
+
+! Fade the text by the given percentage when focus is lost;
+URxvt*fading: 5
+
+! Default fontset
+URxvt*font: xft:Inconsolata:pixelsize=20
+URxvt.font-size.step: 1
+
+! Remove scrollbar
+URxvt.scrollBar: false
+
+! URxvt*perl-ext-common: string
+URxvt*perl-ext-common: default,matcher,font-size
+
+! Comma-separated list(s) of perl extension scripts
+URxvt*perl-ext: digital-clock
+
+! font size (zoom)
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
