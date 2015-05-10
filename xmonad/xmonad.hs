@@ -24,5 +24,5 @@ main = xmonad $ ewmh defaultConfig
          { modMask         = mod4Mask -- use Winkey
          , layoutHook      = myLayout
          , handleEventHook = myHandleEventHook
-         , terminal        = "xterm"
+         , terminal        = "urxvt"
          } -- `additionalKeys` myKeys
