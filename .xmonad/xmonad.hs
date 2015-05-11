@@ -15,9 +15,14 @@ myHandleEventHook = handleEventHook defaultConfig
                           -- themselves (from EwmhDesktops)
   <+> docksEventHook      -- add docks inmediately (from ManageDocks)
 
+-- myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
+-- [ ((modMask, xK_u), spawn "dm-tool switch-to-greeter")
+-- ]
+
 -- add ewmh support to the config
 main = xmonad $ ewmh defaultConfig
          { modMask         = mod4Mask -- use Winkey
          , layoutHook      = myLayout
          , handleEventHook = myHandleEventHook
-         }
+         , terminal        = "urxvt"
+         } -- `additionalKeys` myKeys
