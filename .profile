@@ -17,6 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
 
-EDITOR='vim'
+# set my prefered editor
+export EDITOR='vim'

@@ -1,6 +1,8 @@
-# .xsession
+#!/bin/bash
 
-[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
+xrdb $HOME/.Xresources
+source $HOME/.profile
+
 # https://www.debian.org/devel/passwordlessssh
 # ssh-add
 workrave &
