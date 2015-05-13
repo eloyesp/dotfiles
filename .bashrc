@@ -99,3 +99,25 @@ if ! shopt -oq posix; then
 fi
 
 export CDPATH='~/projects' # search path for cd
+
+# Contributed by Noah Friedman and Roland McGrath.
+
+# To be run by the PROMPT_COMMAND variable, so that one can see what
+# the exit status of processes are.
+
+check_exit_status() {
+  local status="$?"
+  local signal=""
+
+  if [ ${status} -ne 0 ] && [ ${status} != 128 ]; then
+    # If process exited by a signal, determine name of signal.
+    if [ ${status} -gt 128 ]; then
+      signal="$(builtin kill -l $((${status} - 128)) 2>/dev/null)"
+      if [ "$signal" ]; then signal=" ($signal)"; fi
+    fi
+    echo -e "\e[31;1m[Exit ${status}${signal}]\e[0m" 1>&2
+  fi
+  return 0
+}
+
+PROMPT_COMMAND=check_exit_status
