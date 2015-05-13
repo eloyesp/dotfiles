@@ -97,3 +97,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export CDPATH='~/projects' # search path for cd
