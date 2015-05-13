@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
