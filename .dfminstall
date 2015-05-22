@@ -2,3 +2,4 @@ README.md skip
 bin       recurse
 .vim      recurse
 .xmonad   recurse
+.urxvt    recurse

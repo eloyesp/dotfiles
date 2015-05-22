@@ -94,7 +94,6 @@ URxvt*fading: 5
 
 ! Default fontset
 URxvt*font: xft:Inconsolata:pixelsize=20
-URxvt.font-size.step: 1
 
 ! Remove scrollbar
 URxvt.scrollBar: false
