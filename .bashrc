@@ -98,7 +98,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export CDPATH='.:~/projects' # search path for cd
+CDPATH='.:~/projects' # search path for cd
 
 # Contributed by Noah Friedman and Roland McGrath.
 
