@@ -1,0 +1,16 @@
+# Editor files
+*~
+*.swp
+\#*
+
+# Generated
+.yardoc/
+webrat.log
+/tags
+/doc/tags
+.gs/
+
+# Local config
+.bundle/
+Session.vim
+.env.local
