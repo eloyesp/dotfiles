@@ -7,5 +7,6 @@ source $HOME/.profile
 # ssh-add
 workrave &
 redshift &
+[[ -x $HOME/.screenlayout/default.sh ]] && $HOME/.screenlayout/default.sh
 
 xmonad
