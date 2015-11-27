@@ -1,0 +1,34 @@
+set realname = "Eloy Espinaco"
+set mbox_type = Maildir
+set folder = ~/Mail/gmail
+set spoolfile = ~/Mail/gmail/INBOX
+
+set alias_file = ~/.mutt_aliases
+source ~/.mutt_aliases
+set query_command = "goobook query '%s'"
+bind editor <tab> complete-query
+
+set attribution = "En %d, %n escribió:"
+set sort_aux = last-date-received
+
+set beep_new = yes
+set sig_dashes = no # Yo uso mi nombre solo como signature
+
+bind pager <space> half-down
+# bind pager <backspace> half-up
+bind pager j next-line
+bind pager k previous-line
+bind pager <enter> next-undeleted
+bind pager <return> next-undeleted
+bind pager <backspace> previous-undeleted
+bind index \Cd delete-pattern
+bind index,pager D delete-thread
+bind index \Cu undelete-pattern
+bind index,pager U undelete-thread
+
+
+#uncomment the colorscheme you want to use, and comment out the others
+#source ~/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+source ~/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+#source ~/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+#source ~/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
