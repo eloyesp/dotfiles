@@ -14,3 +14,6 @@ webrat.log
 .bundle/
 Session.vim
 .env.local
+
+# Gemset
+.gs/
