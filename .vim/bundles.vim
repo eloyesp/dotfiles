@@ -12,6 +12,9 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
@@ -23,6 +26,10 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'moll/vim-node'
 Plugin 'mileszs/ack.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'godlygeek/tabular'
+" Plugin 'rainerborene/vim-reek'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
