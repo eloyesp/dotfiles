@@ -1,4 +1,5 @@
 README.md skip
+setup     skip
 bin       recurse
 .vim      recurse
 .xmonad   recurse

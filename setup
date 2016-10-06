@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -x
+set -e
+
+# dotfiles
+[ -d ~/.dotfiles ] ||
+  git clone https://github.com/eloyesp/dotfiles.git ~/.dotfiles
+
+~/.dotfiles/bin/dfm install
+
+# Vundle
+[ -d ~/.vim/bundle/Vundle.vim ] ||
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
