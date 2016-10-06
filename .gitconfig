@@ -1,0 +1,11 @@
+[user]
+	name = Eloy Espinaco
+	email = eloyesp@gmail.com
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = ~/.gitignore
