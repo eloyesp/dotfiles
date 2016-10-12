@@ -127,3 +127,5 @@ PROMPT_COMMAND=check_exit_status
 
 # add rubygems bin to the path
 [ -d $HOME/.gem/ruby/2.1.0/bin ] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+
+. $HOME/.shellrc.load
