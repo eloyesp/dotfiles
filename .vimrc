@@ -9,6 +9,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set pastetoggle=<F6>
+set foldlevel=2
 
 "
 " Mappings
