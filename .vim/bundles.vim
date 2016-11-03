@@ -29,6 +29,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
+Plugin 'slim-template/vim-slim.git'
 " Plugin 'rainerborene/vim-reek'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
