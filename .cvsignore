@@ -17,3 +17,7 @@ Session.vim
 
 # Gemset
 .gs/
+node_modules/
+.rsync-filter
+.direnv/
+gitstats/

@@ -3,9 +3,11 @@
 	email = eloyesp@gmail.com
 [alias]
 	co = checkout
+	clean-branches = !git branch --merged | grep -v '*' | grep -v master | xargs git branch -d
+	glog = log --graph --oneline --all --decorate
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.cvsignore
