@@ -17,6 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
 
 # set my prefered editor
