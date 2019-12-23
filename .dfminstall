@@ -3,4 +3,3 @@ setup     skip
 bin       recurse
 .vim      recurse
 .xmonad   recurse
-.urxvt    recurse

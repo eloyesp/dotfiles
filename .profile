@@ -22,3 +22,4 @@ fi
 
 # set my prefered editor
 export EDITOR='vim'
+export TERMINAL=st
