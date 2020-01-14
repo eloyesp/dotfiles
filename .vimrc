@@ -41,3 +41,7 @@ let g:syntastic_check_on_wq = 0
 
 " use // as * in visual mode
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+
+let g:ledger_bin = 'ledger'
+let g:ledger_default_commodity = '$'
+let g:ledger_commodity_sep = ' '
