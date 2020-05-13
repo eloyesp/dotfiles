@@ -11,3 +11,5 @@
 	branch = auto
 [core]
 	excludesfile = ~/.cvsignore
+[commit]
+	verbose = 1
