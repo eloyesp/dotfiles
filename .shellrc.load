@@ -8,3 +8,5 @@ export PYTHONPATH=$HOME/.local
 
 ####
 # put any bash/zsh customizations in here
+
+export BC_ENV_ARGS="-l"
