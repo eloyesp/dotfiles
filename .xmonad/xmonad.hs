@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig(additionalKeys)
 
 myLayout = avoidStruts $ -- leave space for docks (from ManageDocks)
            smartBorders $ -- from NoBorders
@@ -15,14 +16,14 @@ myHandleEventHook = handleEventHook defaultConfig
                           -- themselves (from EwmhDesktops)
   <+> docksEventHook      -- add docks inmediately (from ManageDocks)
 
--- myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
--- [ ((modMask, xK_u), spawn "dm-tool switch-to-greeter")
--- ]
-
 -- add ewmh support to the config
 main = xmonad $ ewmh defaultConfig
          { modMask         = mod4Mask -- use Winkey
          , layoutHook      = myLayout
          , handleEventHook = myHandleEventHook
          , terminal        = "st"
-         } -- `additionalKeys` myKeys
+         -- define addditional keys
+         } `additionalKeys`
+         [ ((mod4Mask .|. shiftMask, xK_p), spawn "passmenu")
+         , ((mod4Mask, xK_u), spawn "dm-tool switch-to-greeter")
+         ]
