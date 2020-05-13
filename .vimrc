@@ -8,13 +8,16 @@ colorscheme solarized
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set pastetoggle=<F6>
+set pastetoggle=<F5>
 set foldlevel=2
 set winheight=10
 set winminheight=2
 
 set ignorecase
 set smartcase
+
+" Make gitgutter happy
+set updatetime=1000
 
 "
 " Mappings
