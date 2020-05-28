@@ -13,3 +13,5 @@
 	excludesfile = ~/.cvsignore
 [commit]
 	verbose = 1
+[pull]
+	ff = only
