@@ -5,6 +5,11 @@
 	co = checkout
 	clean-branches = !git branch --merged | grep -v '*' | grep -v master | xargs git branch -d
 	glog = log --graph --oneline --all --decorate
+	tlog = log --all --date=short --format='%ad %Cblue%h %Creset%s'
+	stash-working = "!f() { \
+	  git commit --quiet --no-verify -m \"temp for stash-working\" && \
+	  git stash push \"$@\" && \
+	  git reset --quiet --soft HEAD~1; }; f""}"
 [color]
 	diff = auto
 	status = auto
