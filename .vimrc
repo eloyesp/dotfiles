@@ -42,6 +42,10 @@ let g:syntastic_check_on_wq = 0
 " use // as * in visual mode
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
+" vim-ledger configuration
 let g:ledger_bin = 'ledger'
 let g:ledger_default_commodity = '$'
 let g:ledger_commodity_sep = ' '
+let g:ledger_date_format = '%Y-%m-%d'
+
+let g:syntastic_java_checkers=[]
