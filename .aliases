@@ -12,3 +12,8 @@ alias gdc='git diff --cached'
 alias gco='git checkout'
 
 alias rm='trash'
+
+alias setclip='xclip -selection c'
+alias copy='xclip -selection c'
+alias getclip='xclip -selection c -o'
+alias clipboard='xclip -selection c -o'
