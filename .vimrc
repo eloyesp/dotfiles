@@ -24,6 +24,7 @@ set updatetime=1000
 "
 
 nmap ñr :wa\|!rake<CR>
+inoremap kj <Esc>
 
 let g:pandoc#formatting#mode = 'h'
 let g:pandoc#formatting#textwitdth = 80
