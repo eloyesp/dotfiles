@@ -19,6 +19,6 @@
 [commit]
 	verbose = 1
 [pull]
-	ff = only
+	rebase = true
 [init]
 	defaultBranch = main
