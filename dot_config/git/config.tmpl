@@ -1,0 +1,55 @@
+# See https://git-scm.com/docs/git-config
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	s  = status
+	clean-branches = !git branch --merged | grep -v '*' | grep -v master | xargs git branch -d
+	glog = log --graph --oneline --decorate
+	tlog = log --all --color --date='format:%F %H:%M %a' --format='%ad %Cblue%h %Cred%aE%Creset %s'
+	alias = config --get-regexp "alias.*"
+	churn = "!git log -M -C --name-only --format='format: \"$@\" | \
+		sed 's/^$/COMMITS/' | sort | uniq -c | sort"
+	authors =  shortlog --summary --numbered --all --no-merges
+	local-ignore = update-index --assume-unchanged
+	local-unignore = update-index --no-assume-unchanged
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true            # Rebase (instead of merge) on pull
+[push]
+	autoSetupRemote = true   # Automatically set upstream branch on push
+[diff]
+	algorithm = histogram    # Clearer diffs on moved/edited lines
+	colorMoved = zebra
+	mnemonicPrefix = true    # More intuitive refs in diff output
+[diff "json"]
+  textconv = "jq ."
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[commit]
+	verbose = true           # Include diff comment in commit message template
+[column]
+	ui = auto                # Output in columns when possible
+[branch]
+	sort = -committerdate    # Sort branches by most recent commit first
+[tag]
+	sort = -version:refname  # Sort version numbers as you would expect
+[rebase]
+	autostash = true
+	autosquash = true
+[rerere]
+	enabled = true           # Record and reuse conflict resolutions
+	autoupdate = true        # Apply stored conflict resolutions automatically
+[user]
+	name = Eloy Espinaco
+	email = eloyesp@gmail.com
+[log]
+	decorate = auto
+	follow = true
+	mailmap = true
+[core]
+  ; pager = delta
