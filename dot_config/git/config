@@ -51,5 +51,7 @@
 	decorate = auto
 	follow = true
 	mailmap = true
+[diff "gpg"]
+	textconv = gpg --no-tty --decrypt
 [core]
   ; pager = delta
